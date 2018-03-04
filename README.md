@@ -3,7 +3,7 @@
 Introduction 
 Content Negotiation
 HATEOAS
-Exceptions (“x” marks the spot)
+Exceptions
 Concurrency
 Security
 Swagger

@@ -1,0 +1,9 @@
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\obj\Debug\netcoreapp2.0\ApplicationCore.Entities.csproj.CoreCompileInputs.cache
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\obj\Debug\netcoreapp2.0\ApplicationCore.Entities.AssemblyInfoInputs.cache
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\obj\Debug\netcoreapp2.0\ApplicationCore.Entities.AssemblyInfo.cs
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\bin\Debug\netcoreapp2.0\ApplicationCore.Entities.deps.json
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\bin\Debug\netcoreapp2.0\ApplicationCore.Entities.dll
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\bin\Debug\netcoreapp2.0\ApplicationCore.Entities.pdb
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\obj\Debug\netcoreapp2.0\ApplicationCore.Entities.dll
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\obj\Debug\netcoreapp2.0\ApplicationCore.Entities.pdb
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\ApplicationCore.Entities\obj\Debug\netcoreapp2.0\ApplicationCore.Entities.csprojResolveAssemblyReference.cache

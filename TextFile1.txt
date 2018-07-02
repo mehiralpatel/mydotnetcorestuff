@@ -1,0 +1,15 @@
+Scaffold-DbContext "Server=192.168.10.11;Database=PPM;user id=ppm;password=Password#456@;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+
+
+
+---------- For insert models
+
+
+Scaffold-DbContext "Server=192.168.10.11;Database=PPM;user id=ppm;password=Password#456@;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -Force 
+
+------- For update models
+
+
+  public PPMContext(DbContextOptions<PPMContext> options): base(options)
+        {
+        }

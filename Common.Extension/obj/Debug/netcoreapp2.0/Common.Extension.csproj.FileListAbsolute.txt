@@ -1,0 +1,9 @@
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\bin\Debug\netcoreapp2.0\Common.Extension.deps.json
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\bin\Debug\netcoreapp2.0\Common.Extension.dll
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\bin\Debug\netcoreapp2.0\Common.Extension.pdb
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\obj\Debug\netcoreapp2.0\Common.Extension.csproj.CoreCompileInputs.cache
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\obj\Debug\netcoreapp2.0\Common.Extension.AssemblyInfoInputs.cache
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\obj\Debug\netcoreapp2.0\Common.Extension.AssemblyInfo.cs
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\obj\Debug\netcoreapp2.0\Common.Extension.dll
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\obj\Debug\netcoreapp2.0\Common.Extension.pdb
+E:\Projects\Learning\SampleCoreAPI\WebApplication1\Common.Extension\obj\Debug\netcoreapp2.0\Common.Extension.csprojResolveAssemblyReference.cache

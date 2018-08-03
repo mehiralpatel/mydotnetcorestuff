@@ -330,20 +330,11 @@ namespace Infrastructure.DataAccess.SqlServer.Repository
         
     }
 ```
- 
- ## Authors
+## Authors
 
 * **Hiral Patel** (https://github.com/mehiralpatel)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-[Use Case] (http://www.mehiralpatel.com/index.php/2018/02/time-officer-bot-virtual-assistant-of-hr/)
-  
-![Architecture Diagram](https://github.com/prakashinfotech/InTimeMgtBot/blob/master/Architecture%20Diagram%20-%201.jpg)
-
-
 

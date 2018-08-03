@@ -1,6 +1,16 @@
 
-# mydotnetcorestuff
+# Net Core Sample Code Architecture
 
+Sample Asp Net Core Architecture provides skeleton to start working and build modules on top of your requirement needs. It has been taken care of 
+
+1. API List, CRUD operation with generalization class 
+2. Exception
+3. Security
+4. Content Negotiation
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Sample ASP.NET Core reference application, demo monolitic application architecture model.
 
@@ -12,12 +22,10 @@ If you wish to use the sample with a persistent database, you will need to run i
 
 You can also run the samples in Docker (see below).
 
- //services.AddDbContext<PPMContext>(c =>
-            //   c.UseInMemoryDatabase("Catalog"));
-
-            
-
-            services.AddDbContext<PPMContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PPMDatabase")));
+```
+ //services.AddDbContext<PPMContext>(c => c.UseInMemoryDatabase("Catalog"));
+ services.AddDbContext<PPMContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PPMDatabase")));
+```
 
 Configuring the sample to use SQL Server
 
@@ -33,21 +41,24 @@ Scaffold-DbContext "Server=xxx.xxx.xx.xx;Database=PPM;user id=ppm;password=Passw
 
 Above command will create scaffold database context files under Data folder. 
 
-
 Introduction 
 Content Negotiation
 
 please find code in Startup.js file as per  below. Uncomment below code to support XML Formatter.
 
+```
   //Below is for xml formatter.
   //services.AddMvc()
   //.AddMvcOptions(opt => opt.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter()));
-	    
-To restrict JSON output formatter, please add below code above your controller.
- [Produces("application/json")]
- 
-Exceptions
+```
 
+To restrict JSON output formatter, please add below code above your controller.
+
+```
+ [Produces("application/json")]
+``` 
+## Exceptions
+```
   public class ErrorHandlingMiddleware
     {
         private readonly RequestDelegate next;
@@ -84,12 +95,12 @@ Exceptions
             return context.Response.WriteAsync(result);
         }
     }
+```
 
-
-Security
+## Security
 
 To restrict to CORS policy, please update below code in startup.cs.
-
+```
  services.AddCors(o => o.AddPolicy("SiteCorsPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
@@ -97,13 +108,14 @@ To restrict to CORS policy, please update below code in startup.cs.
                        .AllowAnyHeader();
             }));
 	    
-	   
-API - List, CRUD operation
+``` 
+##API - List, CRUD operation
 
-Structure
+###### Structure
+
 1. WebApplication1 : This project contains Controller, Web Pages (if needed -  in case only API no web pages will be added), Helpers ( Exception middleware, ValidateModel). Controller Method calls to "ApplicationCore" Interfaces and Services.
 
-
+```
         [Route("")]
         [HttpGet]
         public IActionResult List(int? page, int? itemsPage)
@@ -112,14 +124,12 @@ Structure
             var projectModel = _projectService.GetProjectList(page ?? 1, itemsPage);
             return Ok(projectModel);
         }
-
-
-	    
-
+```
 2. Tools -> Helper : This project contains common extension that can be commonly used to other projects in solution.
-3. ApplicationCore
+3. ApplicationCore :
 
- public ProjectResponse GetProjectList(int pageIndex, int? pageSize)
+```
+public ProjectResponse GetProjectList(int pageIndex, int? pageSize)
         {
 
             var filterSpecification = new ProjectwithDetailSpecification(statusId: (int)Enums.Status.Active);
@@ -167,9 +177,11 @@ Structure
             return vm;
             
         }
-        
+```
+
 ApplicatioCore.Specification : Contains common defination of what to include i.e. below case need to include customer, technology and model when returning project object.
 
+```
  public class ProjectwithDetailSpecification : BaseSpecification<Project>
     {
         public ProjectwithDetailSpecification(int statusId)
@@ -181,25 +193,25 @@ ApplicatioCore.Specification : Contains common defination of what to include i.e
         }
 
     }
-	
-4. ApplicationCore.Entities
+```
+4. ApplicationCore.Entities contains Model.
  
- Contains Model.
- 
-5. Infrastructure
+5. Infrastructure contains
 
 Data : Contains DataContext.
 Services : Contains Common Services.
 
 6. Infrastructure.DataAccess.SqlServer
 
+```
  var root = _itemRepository.List(filterSpecification);
- 
- Above is common line to fetch list.
+```
+Above is common line to fetch list.
 Repository : 
 
 EFRepository - Common implementation for List and CRUD operations.
 
+```
 namespace Infrastructure.DataAccess.SqlServer.Repository
 {
     public class EfRepository<T> : IRepository<T>, IAsyncRepository<T> where T : BaseEntity
@@ -317,5 +329,21 @@ namespace Infrastructure.DataAccess.SqlServer.Repository
 
         
     }
+```
  
+ ## Authors
+
+* **Hiral Patel** (https://github.com/mehiralpatel)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+[Use Case] (http://www.mehiralpatel.com/index.php/2018/02/time-officer-bot-virtual-assistant-of-hr/)
+  
+![Architecture Diagram](https://github.com/prakashinfotech/InTimeMgtBot/blob/master/Architecture%20Diagram%20-%201.jpg)
+
+
 
